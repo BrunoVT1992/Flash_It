@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Flash_It.Droid.DependencyServices;
 using System.Threading;
+using System.Diagnostics;
 
 [assembly: Dependency(typeof(Camera_Droid))]
 
@@ -61,7 +62,10 @@ namespace Flash_It.Droid.DependencyServices
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.ToString());
+                if (Debugger.IsAttached)
+                {
+                    Debug.WriteLine(ex.ToString());
+                }
             }
         }
     }
