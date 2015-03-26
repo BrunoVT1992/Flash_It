@@ -16,6 +16,7 @@ using Java.Lang;
 using Android.Support.V4.App;
 using Xamarin.Forms;
 using Android.Hardware;
+using Flash_It.Handlers;
 
 //[assembly: UsesPermission(Name = "android.permission.WAKE_LOCK")]
 //[assembly: UsesPermission(Name = "android.permission.RECEIVE_SMS")]
@@ -29,65 +30,17 @@ namespace Flash_It.Droid.Listeners
     {
         public override void OnReceive(Context context, Intent intent)
         {
-            //PowerManager.WakeLock sWakeLock;
-            //var pm = PowerManager.FromContext(context);
-            //sWakeLock = pm.NewWakeLock(WakeLockFlags.Partial, "SMSListener");
-            //sWakeLock.Acquire();
-
-            Toast.MakeText(context, "recieved", ToastLength.Long).Show();
+            PowerManager.WakeLock sWakeLock;
+            var pm = PowerManager.FromContext(context);
+            sWakeLock = pm.NewWakeLock(WakeLockFlags.Partial, "SMSListener");
+            sWakeLock.Acquire();
 
             if (Telephony.Sms.Intents.SmsReceivedAction == intent.Action)
             {
-                new Thread(new Runnable(() => {
-                    Flash(500);
-                    Thread.Sleep(250);
-                    Flash(500);
-                })).Start();
+                SmsHandler.SH.SmsRecieved();
             }
 
-            //sWakeLock.Release();
-        }
-
-        public void Flash(int flashDuration)
-        {
-            try
-            {
-                var camera = Camera.Open();
-                var parameters = camera.GetParameters();
-                var supportedFlashModes = camera.GetParameters().SupportedFlashModes;
-
-                var flashMode = string.Empty;
-                if (supportedFlashModes.Contains(Camera.Parameters.FlashModeTorch))
-                {
-                    flashMode = Camera.Parameters.FlashModeTorch;
-                }
-                else if (supportedFlashModes.Contains(Camera.Parameters.FlashModeOn))
-                {
-                    flashMode = Camera.Parameters.FlashModeOn;
-                }
-
-                if (!string.IsNullOrEmpty(flashMode))
-                {
-                    parameters.FlashMode = flashMode;
-                    camera.SetParameters(parameters);
-                    camera.StartPreview();
-
-                    Thread.Sleep(flashDuration);
-                }
-
-                parameters.FlashMode = Camera.Parameters.FlashModeOff;
-                camera.SetParameters(parameters);
-                camera.StopPreview();
-                camera.Release();
-                camera.Dispose();
-            }
-            catch (System.Exception ex)
-            {
-                if (Debugger.IsAttached)
-                {
-                    Debug.WriteLine(ex.ToString());
-                }
-            }
+            sWakeLock.Release();
         }
     }
 }

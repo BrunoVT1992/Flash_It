@@ -10,6 +10,7 @@ using Android.Views;
 using Android.Widget;
 using Debug = System.Diagnostics.Debug;
 using Android.Telephony;
+using Flash_It.Handlers;
 
 namespace Flash_It.Droid.Listeners
 {
@@ -22,20 +23,17 @@ namespace Flash_It.Droid.Listeners
         {
             if (TelephonyManager.ExtraStateRinging == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
-                //TODO: run flash notification
-                Debug.WriteLine(" call ringing");
+                CallHandler.CH.CallState = Enums.CallState.Ringing;
             }
 
             if (TelephonyManager.ExtraStateOffhook == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
-                //TODO: run flash notification
-                Debug.WriteLine("call answered");
+                CallHandler.CH.CallState = Enums.CallState.OffHook;
             }
 
             if (TelephonyManager.ExtraStateIdle == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
-                //TODO: run flash notification
-                Debug.WriteLine("call ended");
+                CallHandler.CH.CallState = Enums.CallState.Idle;
             }
         }
     }

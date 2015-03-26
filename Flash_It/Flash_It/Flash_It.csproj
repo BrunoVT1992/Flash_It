@@ -42,6 +42,8 @@
     </Compile>
     <Compile Include="DependencyServices\ICamera.cs" />
     <Compile Include="Enums\CallState.cs" />
+    <Compile Include="Handlers\CallHandler.cs" />
+    <Compile Include="Handlers\SmsHandler.cs" />
     <Compile Include="Helpers\CameraHelper.cs" />
     <Compile Include="Pages\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
