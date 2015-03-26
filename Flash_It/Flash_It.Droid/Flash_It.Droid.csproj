@@ -103,6 +103,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\launcher.png" />
+    <AndroidResource Include="Resources\drawable\Background.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Flash_It\Flash_It.csproj">
