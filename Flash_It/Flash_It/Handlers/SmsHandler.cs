@@ -1,4 +1,5 @@
 ﻿using Flash_It.Helpers;
+using Flash_It.Preferences;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,9 +35,14 @@ namespace Flash_It.Handlers
 
         public async Task SmsRecieved()
         {
-            CameraHelper.Flash(200);
-            await Task.Delay(200);
-            CameraHelper.Flash(200);
+            if (SmsPreferences.Enabled)
+            {
+                for (int i = 1; i <= SmsPreferences.NumberOffTimes; i++)
+                {
+                    CameraHelper.Flash(SmsPreferences.OnTime);
+                    await Task.Delay(SmsPreferences.OffTime);
+                }
+            }
         }
     }
 }

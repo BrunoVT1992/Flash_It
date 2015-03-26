@@ -1,5 +1,6 @@
 ﻿using Flash_It.Enums;
 using Flash_It.Helpers;
+using Flash_It.Preferences;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,11 +61,14 @@ namespace Flash_It.Handlers
         {
             _flashProcessStarted = true;
 
-            do
+            if (CallPreferences.Enabled)
             {
-                CameraHelper.Flash(400);
-                await Task.Delay(300);
-            } while (_callState == CallState.Ringing);
+                do
+                {
+                    CameraHelper.Flash(CallPreferences.OnTime);
+                    await Task.Delay(CallPreferences.OffTime);
+                } while (_callState == CallState.Ringing);
+            }
 
             _flashProcessStarted = false;
         }

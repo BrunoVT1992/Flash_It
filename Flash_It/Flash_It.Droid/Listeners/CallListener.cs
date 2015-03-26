@@ -11,6 +11,7 @@ using Android.Widget;
 using Debug = System.Diagnostics.Debug;
 using Android.Telephony;
 using Flash_It.Handlers;
+using Flash_It.Helpers;
 
 namespace Flash_It.Droid.Listeners
 {
@@ -21,6 +22,13 @@ namespace Flash_It.Droid.Listeners
     {
         public override void OnReceive(Context context, Intent intent)
         {
+            PowerManager.WakeLock sWakeLock;
+            var pm = PowerManager.FromContext(context);
+            sWakeLock = pm.NewWakeLock(WakeLockFlags.Partial, "CallListener");
+            sWakeLock.Acquire();
+
+            InitialSetupHelper.CheckInitialSetup();
+
             if (TelephonyManager.ExtraStateRinging == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
                 CallHandler.CH.CallState = Enums.CallState.Ringing;
@@ -35,6 +43,8 @@ namespace Flash_It.Droid.Listeners
             {
                 CallHandler.CH.CallState = Enums.CallState.Idle;
             }
+
+            sWakeLock.Release();
         }
     }
 }

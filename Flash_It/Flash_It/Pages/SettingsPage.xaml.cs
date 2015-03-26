@@ -8,11 +8,15 @@ using Xamarin.Forms;
 
 namespace Flash_It.Pages
 {
-    public partial class Page1 : ContentPage
+    public partial class SettingsPage : ContentPage
     {
-        public Page1()
+        public SettingsPage()
         {
             InitializeComponent();
+
+            this.BackgroundColor = Color.Red;
+
+            this.Title = "Flash It";
         }
     }
 }

@@ -2,5 +2,12 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Flash_It.CustomControls.FlashSettingsControl">
-	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentView.Content>
+    <StackLayout Orientation="Vertical">
+      <Label x:Name="TitleLabel" FontSize="Large"/>
+      <Label x:Name="OnTimeLabel" FontSize="Large"/>
+      <Label x:Name="OffTimeLabel" FontSize="Large"/>
+      <Label x:Name="NumberOffTimesLabel" FontSize="Large"/>
+    </StackLayout>
+  </ContentView.Content>
 </ContentView>

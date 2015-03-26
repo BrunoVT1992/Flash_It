@@ -35,6 +35,8 @@ namespace Flash_It.Droid.Listeners
             sWakeLock = pm.NewWakeLock(WakeLockFlags.Partial, "SMSListener");
             sWakeLock.Acquire();
 
+            InitialSetupHelper.CheckInitialSetup();
+
             if (Telephony.Sms.Intents.SmsReceivedAction == intent.Action)
             {
                 SmsHandler.SH.SmsRecieved();

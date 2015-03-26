@@ -15,7 +15,7 @@ namespace Flash_It
         {
             InitializeComponent();
 
-            this.MainPage = new NavigationPage(new Page1())
+            this.MainPage = new NavigationPage(new SettingsPage())
             {
                 BarTextColor = Color.White,
                 BarBackgroundColor = UIPreferences.BasicColor
