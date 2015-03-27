@@ -8,6 +8,8 @@ using Android.OS;
 using Xamarin.Forms;
 using Android.Graphics.Drawables;
 using Xamarin.Forms.Platform.Android;
+using Flash_It.Preferences;
+using Flash_It.Helpers;
 
 namespace Flash_It.Droid
 {
