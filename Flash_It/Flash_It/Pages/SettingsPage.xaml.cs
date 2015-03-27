@@ -14,7 +14,7 @@ namespace Flash_It.Pages
         {
             InitializeComponent();
 
-            this.BackgroundImage = "Background.png";
+            this.BackgroundImage = "Background";
 
             this.Title = "Flash It";
         }

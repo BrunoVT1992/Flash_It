@@ -43,8 +43,7 @@
     <Compile Include="DependencyServices\ICamera.cs" />
     <Compile Include="DependencyServices\IPreferences.cs" />
     <Compile Include="Enums\CallState.cs" />
-    <Compile Include="Handlers\CallHandler.cs" />
-    <Compile Include="Handlers\SmsHandler.cs" />
+    <Compile Include="Helpers\CallHelper.cs" />
     <Compile Include="Helpers\CameraHelper.cs" />
     <Compile Include="Helpers\InitialSetupHelper.cs" />
     <Compile Include="Pages\SettingsPage.xaml.cs">

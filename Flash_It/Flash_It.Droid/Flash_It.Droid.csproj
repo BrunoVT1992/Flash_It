@@ -81,6 +81,8 @@
   <ItemGroup>
     <Compile Include="DependencyServices\Camera_Droid.cs" />
     <Compile Include="DependencyServices\Preferences_Droid.cs" />
+    <Compile Include="IntentServices\CallIntentService.cs" />
+    <Compile Include="IntentServices\SmsIntentService.cs" />
     <Compile Include="Listeners\CallListener.cs" />
     <Compile Include="Listeners\SmsListener.cs" />
     <Compile Include="MainActivity.cs" />
@@ -96,14 +98,18 @@
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\drawable\SplashScreenImage.png" />
+    <AndroidResource Include="Resources\drawable\SplashScreenImage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable-ldpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-mdpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-hdpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\launcher.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\launcher.png" />
-    <AndroidResource Include="Resources\drawable\Background.png" />
+    <AndroidResource Include="Resources\drawable\Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Flash_It\Flash_It.csproj">
