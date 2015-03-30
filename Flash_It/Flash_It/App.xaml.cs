@@ -1,4 +1,5 @@
-﻿using Flash_It.Helpers;
+﻿using Flash_It.DependencyServices;
+using Flash_It.Helpers;
 using Flash_It.Pages;
 using Flash_It.Preferences;
 using System;
@@ -16,7 +17,7 @@ namespace Flash_It
         {
             InitializeComponent();
 
-            InitialSetupHelper.CheckInitialSetup();
+            DependencyService.Get<IInitialSetup>().CheckInitialSetup();
 
             this.MainPage = new NavigationPage(new SettingsPage())
             {

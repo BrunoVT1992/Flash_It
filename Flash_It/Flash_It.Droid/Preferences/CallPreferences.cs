@@ -1,4 +1,5 @@
 ﻿using Flash_It.DependencyServices;
+using Flash_It.Droid.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Flash_It.Preferences
+namespace Flash_It.Droid.Preferences
 {
     public static class CallPreferences
     {
@@ -14,11 +15,11 @@ namespace Flash_It.Preferences
         {
             get
             {
-                return DependencyService.Get<IPreferences>().GetBoolean("CallPreferences_Enabled");
+                return PreferencesHelper.GetBoolean("CallPreferences_Enabled");
             }
             set
             {
-                DependencyService.Get<IPreferences>().SetBoolean("CallPreferences_Enabled", value);
+                PreferencesHelper.SetBoolean("CallPreferences_Enabled", value);
             }
         }
 
@@ -26,11 +27,11 @@ namespace Flash_It.Preferences
         {
             get
             {
-                return DependencyService.Get<IPreferences>().GetInt("CallPreferences_OnTime");
+                return PreferencesHelper.GetInt("CallPreferences_OnTime");
             }
             set
             {
-                DependencyService.Get<IPreferences>().SetInt("CallPreferences_OnTime", value);
+                PreferencesHelper.SetInt("CallPreferences_OnTime", value);
             }
         }
 
@@ -38,11 +39,11 @@ namespace Flash_It.Preferences
         {
             get
             {
-                return DependencyService.Get<IPreferences>().GetInt("CallPreferences_OffTime");
+                return PreferencesHelper.GetInt("CallPreferences_OffTime");
             }
             set
             {
-                DependencyService.Get<IPreferences>().SetInt("CallPreferences_OffTime", value);
+                PreferencesHelper.SetInt("CallPreferences_OffTime", value);
             }
         }
     }

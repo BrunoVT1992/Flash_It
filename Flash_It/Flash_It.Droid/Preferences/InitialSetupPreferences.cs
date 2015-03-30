@@ -1,4 +1,5 @@
 ﻿using Flash_It.DependencyServices;
+using Flash_It.Droid.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Flash_It.Preferences
+namespace Flash_It.Droid.Preferences
 {
     public static class InitialSetupPreferences
     {
@@ -14,11 +15,11 @@ namespace Flash_It.Preferences
         {
             get
             {
-                return DependencyService.Get<IPreferences>().GetBoolean("InitialSetupPreferences_InitialSetupDone");
+                return PreferencesHelper.GetBoolean("InitialSetupPreferences_InitialSetupDone");
             }
             set
             {
-                DependencyService.Get<IPreferences>().SetBoolean("InitialSetupPreferences_InitialSetupDone", value);
+                PreferencesHelper.SetBoolean("InitialSetupPreferences_InitialSetupDone", value);
             }
         }
     }

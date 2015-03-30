@@ -18,9 +18,7 @@ using Xamarin.Forms;
 using Android.Hardware;
 using Android.Support.V4.Content;
 using Flash_It.Droid.IntentServices;
-
-//[assembly: UsesPermission(Name = "android.permission.WAKE_LOCK")]
-//[assembly: UsesPermission(Name = "android.permission.RECEIVE_SMS")]
+using Flash_It.Droid.Helpers;
 
 namespace Flash_It.Droid.Listeners
 {

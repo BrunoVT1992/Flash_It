@@ -80,13 +80,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\CallPreferences_Droid.cs" />
     <Compile Include="DependencyServices\Camera_Droid.cs" />
-    <Compile Include="DependencyServices\Preferences_Droid.cs" />
+    <Compile Include="DependencyServices\InitialSetup_Droid.cs" />
+    <Compile Include="DependencyServices\SmsPreferences_Droid.cs" />
+    <Compile Include="Helpers\CameraHelper.cs" />
+    <Compile Include="Helpers\InitialSetupHelper.cs" />
+    <Compile Include="Helpers\PreferencesHelper.cs" />
     <Compile Include="IntentServices\CallIntentService.cs" />
     <Compile Include="IntentServices\SmsIntentService.cs" />
     <Compile Include="Listeners\CallListener.cs" />
     <Compile Include="Listeners\SmsListener.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Preferences\CallPreferences.cs" />
+    <Compile Include="Preferences\InitialSetupPreferences.cs" />
+    <Compile Include="Preferences\SmsPreferences.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />

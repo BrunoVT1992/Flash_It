@@ -9,9 +9,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Flash_It.Preferences;
-using Flash_It.Helpers;
 using System.Threading;
 using Flash_It.Helpers;
+using Flash_It.Droid.Helpers;
+using Flash_It.Droid.Preferences;
 
 namespace Flash_It.Droid.IntentServices
 {
@@ -20,7 +21,7 @@ namespace Flash_It.Droid.IntentServices
     {
         protected override void OnHandleIntent(Intent intent)
         {
-            InitialSetupHelper.CheckInitialSetup();
+            Flash_It.Droid.Helpers.InitialSetupHelper.CheckInitialSetup();
 
             if (CallPreferences.Enabled && !CallHelper.CH.FlashProcessStarted)
             {
