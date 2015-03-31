@@ -1,4 +1,6 @@
 ﻿using Flash_It.DependencyServices;
+using Flash_It.Helpers;
+using Flash_It.Preferences;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +16,7 @@ namespace Flash_It.CustomControls
         {
             InitializeComponent();
 
-            TitleLabel.Text = "Call preferences";
-            OnTimeTitleLabel.Text = "On time";
-            OffTimeTitleLabel.Text = "Off time";
-
-            this.BackgroundColor = Color.White.MultiplyAlpha(0.5);
+            this.BackgroundColor = UIPreferences.PreferencesControlBackgroundColor;
 
             OnTimeSlider.Value = DependencyService.Get<ICallPreferences>().GetOnTime();
             OffTimeSlider.Value = DependencyService.Get<ICallPreferences>().GetOffTime();
@@ -32,7 +30,7 @@ namespace Flash_It.CustomControls
 
             DependencyService.Get<ICallPreferences>().SetOffTime(value);
 
-            OffTimeSliderValueLabel.Text = value.ToString();
+            OffTimeSliderValueLabel.Text = value + ResourceHelper.GetStringFromName("Miliseconds");
         }
 
         private void OnTimeSlider_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -41,7 +39,7 @@ namespace Flash_It.CustomControls
 
             DependencyService.Get<ICallPreferences>().SetOnTime(value);
 
-            OnTimeSliderValueLabel.Text = value.ToString();
+            OnTimeSliderValueLabel.Text = value + ResourceHelper.GetStringFromName("Miliseconds");
         }
 
         private void EnabledSwitch_Toggled(object sender, ToggledEventArgs e)

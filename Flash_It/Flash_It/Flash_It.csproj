@@ -46,6 +46,7 @@
     <Compile Include="CustomControls\BatterySaverPreferencesControl.xaml.cs">
       <DependentUpon>BatterySaverPreferencesControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DependencyServices\IAppData.cs" />
     <Compile Include="DependencyServices\IBattery.cs" />
     <Compile Include="DependencyServices\IBatterySaverPreferences.cs" />
     <Compile Include="DependencyServices\ISmsPreferences.cs" />
@@ -54,16 +55,27 @@
     <Compile Include="DependencyServices\IInitialSetup.cs" />
     <Compile Include="Enums\CallState.cs" />
     <Compile Include="Helpers\CallHelper.cs" />
+    <Compile Include="Helpers\ResourceHelper.cs" />
+    <Compile Include="MarkupExtensions\ResourceExtension.cs" />
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Preferences\UIPreferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\LocaleResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocaleResource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LocaleResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocaleResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

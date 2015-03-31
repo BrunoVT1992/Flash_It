@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Flash_It.CustomControls.BatterySaverPreferencesControl">
+             x:Class="Flash_It.CustomControls.BatterySaverPreferencesControl"
+             xmlns:extension="clr-namespace:Flash_It.MarkupExtensions;assembly=Flash_It">
   <ContentView.Content>
     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5">
       <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-        <Label x:Name="TitleLabel" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Label Text="{extension:ResourceExtension Name=BatterySaverPreferencesControl_Title}" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
         <Switch x:Name="EnabledSwitch" Toggled="EnabledSwitch_Toggled" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="80" HeightRequest="40"/>
       </StackLayout>
-      <Label x:Name="MinBatteryTitleLabel" FontSize="Medium"/>
+      <Label Text="{extension:ResourceExtension Name=BatterySaverPreferencesControl_MinLevel}" FontSize="Medium"/>
       <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-        <Slider x:Name="MinBatterySlider" Maximum="99" ValueChanged="MinBatterySlider_ValueChanged" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Slider x:Name="MinBatterySlider" Maximum="99" Minimum="1" ValueChanged="MinBatterySlider_ValueChanged" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
         <Label x:Name="SliderValueLabel" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
       </StackLayout>
     </StackLayout>

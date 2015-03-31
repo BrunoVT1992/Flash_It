@@ -1,23 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Flash_It.CustomControls.CallPreferencesControl">
+             x:Class="Flash_It.CustomControls.CallPreferencesControl"
+             xmlns:extension="clr-namespace:Flash_It.MarkupExtensions;assembly=Flash_It">
   <ContentView.Content>
     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Padding="5">
       <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-        <Label x:Name="TitleLabel" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Label Text="{extension:ResourceExtension Name=CallPreferencesControl_Title}" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
         <Switch x:Name="EnabledSwitch" Toggled="EnabledSwitch_Toggled" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="80" HeightRequest="40"/>
       </StackLayout>
       
-      <Label x:Name="OnTimeTitleLabel" FontSize="Medium"/>
+      <Label Text="{extension:ResourceExtension Name=OnTime}" FontSize="Medium"/>
       <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-        <Slider x:Name="OnTimeSlider" Maximum="1000" ValueChanged="OnTimeSlider_ValueChanged" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Slider x:Name="OnTimeSlider" Maximum="1000" Minimum="50" ValueChanged="OnTimeSlider_ValueChanged" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
         <Label x:Name="OnTimeSliderValueLabel" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
       </StackLayout>
 
-      <Label x:Name="OffTimeTitleLabel" FontSize="Medium"/>
+      <Label Text="{extension:ResourceExtension Name=OffTime}" FontSize="Medium"/>
       <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-        <Slider x:Name="OffTimeSlider" Maximum="1000" ValueChanged="OffTimeSlider_ValueChanged" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+        <Slider x:Name="OffTimeSlider" Maximum="1000" Minimum="50" ValueChanged="OffTimeSlider_ValueChanged" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
         <Label x:Name="OffTimeSliderValueLabel" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
       </StackLayout>
     </StackLayout>

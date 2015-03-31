@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\AppData_Droid.cs" />
     <Compile Include="DependencyServices\BatterySaverPreferences_Droid.cs" />
     <Compile Include="DependencyServices\Battery_Droid.cs" />
     <Compile Include="DependencyServices\CallPreferences_Droid.cs" />

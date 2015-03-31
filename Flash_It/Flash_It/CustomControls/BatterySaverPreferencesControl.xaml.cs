@@ -1,4 +1,5 @@
 ﻿using Flash_It.DependencyServices;
+using Flash_It.Preferences;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,7 @@ namespace Flash_It.CustomControls
         {
             InitializeComponent();
 
-            TitleLabel.Text = "Battery saver";
-            MinBatteryTitleLabel.Text = "Min battery level";
-
-            this.BackgroundColor = Color.White.MultiplyAlpha(0.5);
+            this.BackgroundColor = UIPreferences.PreferencesControlBackgroundColor;
 
             MinBatterySlider.Value = DependencyService.Get<IBatterySaverPreferences>().GetBatteryMinLevel();
 
@@ -35,7 +33,7 @@ namespace Flash_It.CustomControls
 
             DependencyService.Get<IBatterySaverPreferences>().SetBatteryMinLevel(value);
 
-            SliderValueLabel.Text = value.ToString();
+            SliderValueLabel.Text = value + "%";
         }
     }
 }
