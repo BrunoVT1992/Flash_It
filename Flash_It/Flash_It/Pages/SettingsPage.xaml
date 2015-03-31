@@ -6,17 +6,9 @@
   <ContentPage.Content>
     <ScrollView>
       <StackLayout Orientation="Vertical" Padding="5">
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
-        <customcontrols:FlashSettingsControl Title="Text"/>
+        <customcontrols:SmsPreferencesControl />
+        <customcontrols:CallPreferencesControl />
+        <customcontrols:BatterySaverPreferencesControl />
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>
