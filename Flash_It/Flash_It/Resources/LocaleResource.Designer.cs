@@ -62,6 +62,15 @@ namespace Flash_It.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Flash It.
+        /// </summary>
+        internal static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Min battery level.
         /// </summary>
         internal static string BatterySaverPreferencesControl_MinLevel {

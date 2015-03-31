@@ -2,13 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Flash_It.Pages.SettingsPage"
-             xmlns:customcontrols="clr-namespace:Flash_It.CustomControls;assembly=Flash_It">
+             xmlns:customcontrols="clr-namespace:Flash_It.CustomControls;assembly=Flash_It"
+             xmlns:extension="clr-namespace:Flash_It.MarkupExtensions;assembly=Flash_It"
+             Title="{extension:ResourceExtension Name=AppName}">
   <ContentPage.Content>
     <ScrollView>
-      <StackLayout Orientation="Vertical" Padding="5">
-        <customcontrols:SmsPreferencesControl />
-        <customcontrols:CallPreferencesControl />
-        <customcontrols:BatterySaverPreferencesControl />
+      <StackLayout Padding="0" Spacing="20" Orientation="Vertical">
+        <StackLayout Orientation="Vertical" Padding="5">
+          <customcontrols:SmsPreferencesControl />
+          <customcontrols:CallPreferencesControl />
+          <customcontrols:BatterySaverPreferencesControl />
+        </StackLayout>
+        
+        <Label x:Name="AppVersionlabel" HorizontalOptions="CenterAndExpand"/>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

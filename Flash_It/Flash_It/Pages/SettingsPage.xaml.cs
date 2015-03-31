@@ -1,4 +1,5 @@
-﻿using Flash_It.Helpers;
+﻿using Flash_It.DependencyServices;
+using Flash_It.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace Flash_It.Pages
             InitializeComponent();
 
             this.BackgroundImage = "Background";
+
+            AppVersionlabel.Text = DependencyService.Get<IAppData>().GetAppVersion();
 
             this.Title = "Flash It";
         }

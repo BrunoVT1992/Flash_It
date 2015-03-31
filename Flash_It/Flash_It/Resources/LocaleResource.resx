@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>Flash It</value>
+  </data>
   <data name="BatterySaverPreferencesControl_MinLevel" xml:space="preserve">
     <value>Min battery level</value>
   </data>
