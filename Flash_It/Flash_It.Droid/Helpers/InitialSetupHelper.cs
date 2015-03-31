@@ -23,6 +23,9 @@ namespace Flash_It.Droid.Helpers
                 CallPreferences.OnTime = 300;
                 CallPreferences.OffTime = 300;
 
+                BatterySaverPreferences.BatterySaverEnabled = true;
+                BatterySaverPreferences.BatteryMinLevel = 5;
+
                 InitialSetupPreferences.InitialSetupDone = true;
             }
         }
