@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Flash_It
+namespace Flash_It.DependencyServices
 {
-    public interface ITest
+    public interface IBattery
     {
-        string GetText();
+        int GetBatteryLevel();
     }
 }

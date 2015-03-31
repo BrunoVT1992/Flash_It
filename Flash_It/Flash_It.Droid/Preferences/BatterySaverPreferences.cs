@@ -15,15 +15,15 @@ namespace Flash_It.Droid.Preferences
 {
     public static class BatterySaverPreferences
     {
-        public static Boolean BatterySaverEnabled
+        public static Boolean Enabled
         {
             get
             {
-                return PreferencesHelper.GetBoolean("BatterySaverPreferences_BatterySaverEnabled");
+                return PreferencesHelper.GetBoolean("BatterySaverPreferences_Enabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("BatterySaverPreferences_BatterySaverEnabled", value);
+                PreferencesHelper.SetBoolean("BatterySaverPreferences_Enabled", value);
             }
         }
 

@@ -25,7 +25,7 @@ namespace Flash_It.Droid.Helpers
 
         public static Boolean CheckBatteryLevelAllowed()
         {
-            if (BatterySaverPreferences.BatterySaverEnabled)
+            if (BatterySaverPreferences.Enabled)
             {
                 if (BatterySaverPreferences.BatteryMinLevel < GetBatteryLevel())
                 {

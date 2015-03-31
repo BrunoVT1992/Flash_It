@@ -80,6 +80,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\BatterySaverPreferences_Droid.cs" />
+    <Compile Include="DependencyServices\Battery_Droid.cs" />
     <Compile Include="DependencyServices\CallPreferences_Droid.cs" />
     <Compile Include="DependencyServices\Camera_Droid.cs" />
     <Compile Include="DependencyServices\InitialSetup_Droid.cs" />
@@ -100,7 +102,6 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
-    <Compile Include="Test_Droid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

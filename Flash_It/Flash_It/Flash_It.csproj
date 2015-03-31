@@ -40,13 +40,14 @@
     <Compile Include="CustomControls\FlashSettingsControl.xaml.cs">
       <DependentUpon>FlashSettingsControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DependencyServices\IBattery.cs" />
+    <Compile Include="DependencyServices\IBatterySaverPreferences.cs" />
     <Compile Include="DependencyServices\ISmsPreferences.cs" />
     <Compile Include="DependencyServices\ICallPreferences.cs" />
     <Compile Include="DependencyServices\ICamera.cs" />
     <Compile Include="DependencyServices\IInitialSetup.cs" />
     <Compile Include="Enums\CallState.cs" />
     <Compile Include="Helpers\CallHelper.cs" />
-    <Compile Include="ITest.cs" />
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
