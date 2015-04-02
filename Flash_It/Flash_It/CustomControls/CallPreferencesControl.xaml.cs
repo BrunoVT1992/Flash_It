@@ -16,7 +16,7 @@ namespace Flash_It.CustomControls
         {
             InitializeComponent();
 
-            this.BackgroundColor = UIPreferences.PreferencesControlBackgroundColor;
+            this.BackgroundColor = UIPreferences.WhiteBackgroundColor;
 
             OnTimeSlider.Value = DependencyService.Get<ICallPreferences>().GetOnTime();
             OffTimeSlider.Value = DependencyService.Get<ICallPreferences>().GetOffTime();

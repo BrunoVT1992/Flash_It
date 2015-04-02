@@ -15,7 +15,7 @@ namespace Flash_It.CustomControls
         {
             InitializeComponent();
 
-            this.BackgroundColor = UIPreferences.PreferencesControlBackgroundColor;
+            this.BackgroundColor = UIPreferences.WhiteBackgroundColor;
 
             MinBatterySlider.Value = DependencyService.Get<IBatterySaverPreferences>().GetBatteryMinLevel();
 

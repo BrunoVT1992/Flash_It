@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flash_It.Pages.AboutPage"
+             xmlns:customcontrols="clr-namespace:Flash_It.CustomControls;assembly=Flash_It"
+             xmlns:extension="clr-namespace:Flash_It.MarkupExtensions;assembly=Flash_It"
+             Title="{extension:ResourceExtension Name=AboutPage_Title}" BackgroundImage="Background">
+  <ContentPage.Content>
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <StackLayout x:Name="ContentStack" Padding="5" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Label Text="qsdfhuiosdf"/>
+        <Label Text="fsdfsdfs"/>
+        <Label Text="dcujsdvj jsvd sdj sdhf qsd fhldhf kshd klh sdlh sdjklf"/>
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

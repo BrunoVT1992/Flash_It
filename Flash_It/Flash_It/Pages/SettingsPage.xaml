@@ -4,7 +4,7 @@
              x:Class="Flash_It.Pages.SettingsPage"
              xmlns:customcontrols="clr-namespace:Flash_It.CustomControls;assembly=Flash_It"
              xmlns:extension="clr-namespace:Flash_It.MarkupExtensions;assembly=Flash_It"
-             Title="{extension:ResourceExtension Name=AppName}">
+             Title="{extension:ResourceExtension Name=AppName}" BackgroundImage="Background">
   <ContentPage.Content>
     <ScrollView>
       <StackLayout Padding="0" Spacing="20" Orientation="Vertical">
@@ -13,7 +13,7 @@
           <customcontrols:CallPreferencesControl />
           <customcontrols:BatterySaverPreferencesControl />
         </StackLayout>
-        
+
         <Label x:Name="AppVersionlabel" HorizontalOptions="CenterAndExpand"/>
       </StackLayout>
     </ScrollView>

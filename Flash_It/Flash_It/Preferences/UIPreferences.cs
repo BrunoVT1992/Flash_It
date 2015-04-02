@@ -12,12 +12,11 @@ namespace Flash_It.Preferences
         public static Color BasicColor
         {
             get {
-                //return Color.FromHex("#557BD4");
                 return Color.FromHex("#29738C");
             }
         }
 
-        public static Color PreferencesControlBackgroundColor
+        public static Color WhiteBackgroundColor
         {
             get
             {
