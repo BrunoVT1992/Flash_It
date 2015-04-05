@@ -11,6 +11,7 @@
         <StackLayout Orientation="Vertical" Padding="5">
           <customcontrols:SmsPreferencesControl />
           <customcontrols:CallPreferencesControl />
+          <customcontrols:ProfilePreferencesControl />
           <customcontrols:BatterySaverPreferencesControl />
         </StackLayout>
 

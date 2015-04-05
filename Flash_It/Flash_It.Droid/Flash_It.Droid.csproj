@@ -86,11 +86,13 @@
     <Compile Include="DependencyServices\CallPreferences_Droid.cs" />
     <Compile Include="DependencyServices\Camera_Droid.cs" />
     <Compile Include="DependencyServices\InitialSetup_Droid.cs" />
+    <Compile Include="DependencyServices\RingerPreferences_Droid.cs" />
     <Compile Include="DependencyServices\SmsPreferences_Droid.cs" />
     <Compile Include="Helpers\BatteryHelper.cs" />
     <Compile Include="Helpers\CameraHelper.cs" />
     <Compile Include="Helpers\InitialSetupHelper.cs" />
     <Compile Include="Helpers\PreferencesHelper.cs" />
+    <Compile Include="Helpers\RingerHelper.cs" />
     <Compile Include="IntentServices\CallIntentService.cs" />
     <Compile Include="IntentServices\SmsIntentService.cs" />
     <Compile Include="Listeners\CallListener.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Preferences\BatterySaverPreferences.cs" />
     <Compile Include="Preferences\CallPreferences.cs" />
     <Compile Include="Preferences\InitialSetupPreferences.cs" />
+    <Compile Include="Preferences\RingerPreferences.cs" />
     <Compile Include="Preferences\SmsPreferences.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -134,6 +134,42 @@ namespace Flash_It.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Loud.
+        /// </summary>
+        internal static string ProfilePreferencesControl_Normal {
+            get {
+                return ResourceManager.GetString("ProfilePreferencesControl_Normal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Silent.
+        /// </summary>
+        internal static string ProfilePreferencesControl_Silent {
+            get {
+                return ResourceManager.GetString("ProfilePreferencesControl_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profiles.
+        /// </summary>
+        internal static string ProfilePreferencesControl_Title {
+            get {
+                return ResourceManager.GetString("ProfilePreferencesControl_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vibrate.
+        /// </summary>
+        internal static string ProfilePreferencesControl_Vibrate {
+            get {
+                return ResourceManager.GetString("ProfilePreferencesControl_Vibrate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Number of times.
         /// </summary>
         internal static string SmsPreferencesControl_NumberOfTimes {

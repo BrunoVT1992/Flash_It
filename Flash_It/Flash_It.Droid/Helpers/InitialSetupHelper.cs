@@ -23,6 +23,10 @@ namespace Flash_It.Droid.Helpers
                 CallPreferences.OnTime = 300;
                 CallPreferences.OffTime = 300;
 
+                RingerPreferences.NormalModeEnabled = true;
+                RingerPreferences.VibrateModeEnabled = true;
+                RingerPreferences.SilentModeEnabled = true;
+
                 BatterySaverPreferences.Enabled = true;
                 BatterySaverPreferences.BatteryMinLevel = 5;
 

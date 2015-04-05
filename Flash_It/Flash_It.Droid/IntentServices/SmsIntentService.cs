@@ -25,7 +25,7 @@ namespace Flash_It.Droid.IntentServices
         {
             InitialSetupHelper.CheckInitialSetup();
 
-            if (SmsPreferences.Enabled && BatteryHelper.CheckBatteryLevelAllowed())
+            if (SmsPreferences.Enabled && BatteryHelper.CheckBatteryLevelAllowed() && RingerHelper.CheckIfProfileIsAllowed())
             {
                 for (int i = 1; i <= SmsPreferences.NumberOfTimes; i++)
                 {

@@ -24,7 +24,7 @@ namespace Flash_It.Droid.IntentServices
             Flash_It.Droid.Helpers.InitialSetupHelper.CheckInitialSetup();
 
             
-            if (CallPreferences.Enabled && !CallHelper.CH.FlashProcessStarted && BatteryHelper.CheckBatteryLevelAllowed())
+            if (CallPreferences.Enabled && !CallHelper.CH.FlashProcessStarted && BatteryHelper.CheckBatteryLevelAllowed() && RingerHelper.CheckIfProfileIsAllowed())
             {
                 CallHelper.CH.FlashProcessStarted = true;
 
