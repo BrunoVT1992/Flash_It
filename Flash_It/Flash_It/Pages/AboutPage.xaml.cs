@@ -15,6 +15,8 @@ namespace Flash_It.Pages
             InitializeComponent();
 
             ContentStack.BackgroundColor = UIPreferences.WhiteBackgroundColor;
+
+            InfoTextLabel.Text = "Text to come...";
         }
     }
 }

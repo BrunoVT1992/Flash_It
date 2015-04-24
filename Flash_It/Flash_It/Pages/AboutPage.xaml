@@ -8,9 +8,7 @@
   <ContentPage.Content>
     <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
       <StackLayout x:Name="ContentStack" Padding="5" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <Label Text="qsdfhuiosdf"/>
-        <Label Text="fsdfsdfs"/>
-        <Label Text="dcujsdvj jsvd sdj sdhf qsd fhldhf kshd klh sdlh sdjklf"/>
+        <Label x:Name="InfoTextLabel"/>
       </StackLayout>
     </ScrollView>
   </ContentPage.Content>

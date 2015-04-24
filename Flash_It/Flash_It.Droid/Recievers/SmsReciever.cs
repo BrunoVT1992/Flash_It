@@ -20,17 +20,14 @@ using Android.Support.V4.Content;
 using Flash_It.Droid.IntentServices;
 using Flash_It.Droid.Helpers;
 
-namespace Flash_It.Droid.Listeners
+namespace Flash_It.Droid.Recievers
 {
     [BroadcastReceiver(Enabled = true, Label = "SmsListener")]
     [IntentFilter(new [] { "android.provider.Telephony.SMS_RECEIVED" }, Priority = Int32.MaxValue)]
-
-    public class SmsListener : WakefulBroadcastReceiver
+    public class SmsReciever : WakefulBroadcastReceiver
     {
         public override void OnReceive(Context context, Intent intent)
         {
-            InitialSetupHelper.CheckInitialSetup();
-
             if (Telephony.Sms.Intents.SmsReceivedAction == intent.Action)
             {
                 Intent service = new Intent(context, typeof(SmsIntentService));

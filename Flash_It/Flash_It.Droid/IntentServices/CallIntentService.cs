@@ -13,6 +13,7 @@ using System.Threading;
 using Flash_It.Helpers;
 using Flash_It.Droid.Helpers;
 using Flash_It.Droid.Preferences;
+using Android.Telephony;
 
 namespace Flash_It.Droid.IntentServices
 {
@@ -21,8 +22,7 @@ namespace Flash_It.Droid.IntentServices
     {
         protected override void OnHandleIntent(Intent intent)
         {
-            Flash_It.Droid.Helpers.InitialSetupHelper.CheckInitialSetup();
-
+            InitialSetupHelper.CheckInitialSetup();
             
             if (CallPreferences.Enabled && !CallHelper.CH.FlashProcessStarted && BatteryHelper.CheckBatteryLevelAllowed() && RingerHelper.CheckIfProfileIsAllowed())
             {
@@ -32,7 +32,7 @@ namespace Flash_It.Droid.IntentServices
                 {
                     CameraHelper.Flash(CallPreferences.OnTime);
                     Thread.Sleep(CallPreferences.OffTime);
-                } while (CallHelper.CH.CallState == Enums.CallState.Ringing);
+                } while (CallHelper.CH.CallState == TelephonyManager.ExtraStateRinging);
 
                 CallHelper.CH.FlashProcessStarted = false;
             }

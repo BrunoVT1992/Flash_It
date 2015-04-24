@@ -1,5 +1,4 @@
-﻿using Flash_It.Enums;
-using Flash_It.Helpers;
+﻿using Flash_It.Helpers;
 using Flash_It.Preferences;
 using System;
 using System.Collections.Generic;
@@ -34,7 +33,7 @@ namespace Flash_It.Helpers
             }
         }
 
-        public CallState CallState { get; set; }
+        public string CallState { get; set; }
 
         public Boolean FlashProcessStarted { get; set; }
     }
