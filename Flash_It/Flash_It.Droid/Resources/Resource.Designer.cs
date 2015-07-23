@@ -68,14 +68,61 @@ namespace Flash_It.Droid
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f060004
+			public const int Text1SeekBar = 2131099652;
+			
+			// aapt resource value: 0x7f060000
+			public const int TextFragment = 2131099648;
+			
+			// aapt resource value: 0x7f060003
+			public const int TextSubTitleTextView = 2131099651;
+			
+			// aapt resource value: 0x7f060002
+			public const int TextSwitchView = 2131099650;
+			
+			// aapt resource value: 0x7f060001
+			public const int TextTitleTextView = 2131099649;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
+		public partial class Layout
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int SettingsLayout = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int TextFragmentLayout = 2130903041;
+			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Layout()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030001
-			public const int ApplicationName = 2130903041;
+			// aapt resource value: 0x7f040001
+			public const int ApplicationName = 2130968577;
 			
-			// aapt resource value: 0x7f030000
-			public const int Hello = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int Hello = 2130968576;
 			
 			static String()
 			{
@@ -90,8 +137,14 @@ namespace Flash_It.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int Theme_Splash = 2130968576;
+			// aapt resource value: 0x7f050002
+			public const int ActionBarTheme = 2131034114;
+			
+			// aapt resource value: 0x7f050001
+			public const int MainTheme = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int Theme_Splash = 2131034112;
 			
 			static Style()
 			{

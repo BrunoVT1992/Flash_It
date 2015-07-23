@@ -9,6 +9,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Flash_It.Droid.Activities;
 
 namespace Flash_It.Droid
 {
@@ -19,7 +20,7 @@ namespace Flash_It.Droid
         {
             base.OnCreate(bundle);
 
-            var intent = new Intent(this, typeof(MainActivity));
+            var intent = new Intent(this, typeof(SettingsActivity));
             StartActivity(intent);
             Finish();
         }

@@ -23,6 +23,7 @@
     <JavaMaximumHeapSize />
     <JavaOptions />
     <NuGetPackageImportStamp>706acdd8</NuGetPackageImportStamp>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -89,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\SettingsActivity.cs" />
     <Compile Include="DependencyServices\AppData_Droid.cs" />
     <Compile Include="DependencyServices\BatterySaverPreferences_Droid.cs" />
     <Compile Include="DependencyServices\Battery_Droid.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="DependencyServices\InitialSetup_Droid.cs" />
     <Compile Include="DependencyServices\RingerPreferences_Droid.cs" />
     <Compile Include="DependencyServices\SmsPreferences_Droid.cs" />
+    <Compile Include="Fragments\TextFragment.cs" />
     <Compile Include="Helpers\BatteryHelper.cs" />
     <Compile Include="Helpers\CameraHelper.cs" />
     <Compile Include="Helpers\InitialSetupHelper.cs" />
@@ -120,6 +123,10 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\SettingsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TextFragmentLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
