@@ -22,9 +22,8 @@
     <MandroidI18n />
     <JavaMaximumHeapSize />
     <JavaOptions />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>8b508b0b</NuGetPackageImportStamp>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +57,10 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FormsViewGroup, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
@@ -66,15 +69,41 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.3.6376\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\SettingsActivity.cs" />
+    <Compile Include="DependencyServices\AppData_Droid.cs" />
+    <Compile Include="DependencyServices\BatterySaverPreferences_Droid.cs" />
+    <Compile Include="DependencyServices\Battery_Droid.cs" />
+    <Compile Include="DependencyServices\CallPreferences_Droid.cs" />
+    <Compile Include="DependencyServices\Camera_Droid.cs" />
+    <Compile Include="DependencyServices\InitialSetup_Droid.cs" />
+    <Compile Include="DependencyServices\RingerPreferences_Droid.cs" />
+    <Compile Include="DependencyServices\SmsPreferences_Droid.cs" />
+    <Compile Include="Fragments\TextFragment.cs" />
     <Compile Include="Helpers\BatteryHelper.cs" />
     <Compile Include="Helpers\CameraHelper.cs" />
     <Compile Include="Helpers\InitialSetupHelper.cs" />
@@ -83,7 +112,8 @@
     <Compile Include="IntentServices\CallIntentService.cs" />
     <Compile Include="IntentServices\SmsIntentService.cs" />
     <Compile Include="Recievers\CallReciever.cs" />
-    <Compile Include="Recievers\TextMessageReciever.cs" />
+    <Compile Include="Recievers\SmsReciever.cs" />
+    <Compile Include="MainActivity.cs" />
     <Compile Include="Preferences\BatterySaverPreferences.cs" />
     <Compile Include="Preferences\CallPreferences.cs" />
     <Compile Include="Preferences\InitialSetupPreferences.cs" />
@@ -91,26 +121,16 @@
     <Compile Include="Preferences\SmsPreferences.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Activities\MainActivity.cs" />
-    <Compile Include="Views\Activities\SplachActivity.cs" />
-    <Compile Include="Views\Fragments\BatteryFragment.cs" />
-    <Compile Include="Views\Fragments\CallFragment.cs" />
-    <Compile Include="Views\Fragments\TextMessageFragment.cs" />
+    <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <AndroidResource Include="Resources\layout\ActivityMain.axml">
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\SettingsLayout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FragmentTextMessage.axml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\FragmentCall.axml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\FragmentBattery.axml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TextFragmentLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
@@ -132,9 +152,19 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <ProjectReference Include="..\Flash_It\Flash_It.csproj">
+      <Name>Flash_It</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.1.4.3.6376\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.3.6376\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.4.3.6376\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.4.3.6376\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

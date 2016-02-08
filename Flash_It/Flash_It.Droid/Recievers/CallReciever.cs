@@ -10,9 +10,9 @@ using Android.Views;
 using Android.Widget;
 using Debug = System.Diagnostics.Debug;
 using Android.Telephony;
-using Flash_It.Helpers;
 using Android.Support.V4.Content;
 using Flash_It.Droid.IntentServices;
+using Flash_It.Droid.Helpers;
 
 namespace Flash_It.Droid.Recievers
 {
@@ -24,7 +24,7 @@ namespace Flash_It.Droid.Recievers
         {
             if (TelephonyManager.ExtraStateRinging == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
-                CallHelper.CH.CallState = TelephonyManager.ExtraStateRinging;
+                RingerHelper.CurrentRingerState = TelephonyManager.ExtraStateRinging;
 
                 Intent service = new Intent(context, typeof(CallIntentService));
                 StartWakefulService(context, service);
@@ -32,12 +32,12 @@ namespace Flash_It.Droid.Recievers
 
             if (TelephonyManager.ExtraStateOffhook == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
-                CallHelper.CH.CallState = TelephonyManager.ExtraStateRinging;
+                RingerHelper.CurrentRingerState = TelephonyManager.ExtraStateRinging;
             }
 
             if (TelephonyManager.ExtraStateIdle == intent.GetStringExtra(TelephonyManager.ExtraState))
             {
-                CallHelper.CH.CallState = TelephonyManager.ExtraStateRinging;
+                RingerHelper.CurrentRingerState = TelephonyManager.ExtraStateRinging;
             }
         }
     }

@@ -1,16 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="Theme.Splash" parent="android:Theme">
-    <item name="android:windowBackground">@drawable/splashscreenimage</item>
-    <item name="android:windowNoTitle">true</item>
+  <style name="SplashActivityTheme" parent="@style/ActivityBaseTheme">
+    <item name="android:background">#111199</item>
   </style>
 
-  <style name="MainTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
-    <item name="android:actionBarStyle">@style/ActionBarTheme</item>
-  </style>
-
-  <style name="ActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
-    <item name="android:background">#29738C</item>
-    <item name="android:textColorPrimary">#111fff</item>
-  </style>
+  <style name="ActivityBaseTheme" parent="Theme.AppCompat"/>
 </resources>

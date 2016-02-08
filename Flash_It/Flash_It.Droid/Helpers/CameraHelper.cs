@@ -5,8 +5,6 @@ using Android.Widget;
 using Android.Hardware;
 using Debug = System.Diagnostics.Debug;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-using Flash_It.Droid.DependencyServices;
 using System.Threading;
 using System.Diagnostics;
 using System;

@@ -10,11 +10,6 @@ using Android.Views;
 using Android.Widget;
 using Android.Provider;
 using System.Diagnostics;
-using Debug = System.Diagnostics.Debug;
-using Flash_It.Helpers;
-using Java.Lang;
-using Android.Support.V4.App;
-using Xamarin.Forms;
 using Android.Hardware;
 using Android.Support.V4.Content;
 using Flash_It.Droid.IntentServices;
@@ -24,7 +19,7 @@ namespace Flash_It.Droid.Recievers
 {
     [BroadcastReceiver(Enabled = true, Label = "SmsListener")]
     [IntentFilter(new [] { "android.provider.Telephony.SMS_RECEIVED" }, Priority = Int32.MaxValue)]
-    public class SmsReciever : WakefulBroadcastReceiver
+    public class TextMessageReciever : WakefulBroadcastReceiver
     {
         public override void OnReceive(Context context, Intent intent)
         {

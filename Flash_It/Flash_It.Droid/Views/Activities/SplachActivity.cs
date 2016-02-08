@@ -8,19 +8,19 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V7.App;
 using Android.Content.PM;
-using Flash_It.Droid.Activities;
 
-namespace Flash_It.Droid
+namespace Flash_It.Droid.Views.Activities
 {
-    [Activity(Theme = "@style/Theme.Splash", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
-    public class SplashActivity : Activity
+    [Activity(Theme = "@style/SplashActivityTheme", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    public class SplachActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            var intent = new Intent(this, typeof(SettingsActivity));
+            var intent = new Intent(this, typeof(MainActivity));
             StartActivity(intent);
             Finish();
         }

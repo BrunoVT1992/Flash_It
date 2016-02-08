@@ -1,11 +1,9 @@
-﻿using Flash_It.DependencyServices;
-using Flash_It.Droid.Helpers;
+﻿using Flash_It.Droid.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
 namespace Flash_It.Droid.Preferences
 {

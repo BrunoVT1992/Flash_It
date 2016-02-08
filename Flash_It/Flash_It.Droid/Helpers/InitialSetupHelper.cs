@@ -1,5 +1,4 @@
 ﻿using Flash_It.Droid.Preferences;
-using Flash_It.Preferences;
 using System;
 using System.Collections.Generic;
 using System.Linq;

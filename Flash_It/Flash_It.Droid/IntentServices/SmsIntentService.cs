@@ -11,8 +11,6 @@ using Android.Widget;
 using System.Threading;
 using Android.Hardware;
 using System.Diagnostics;
-using Flash_It.Helpers;
-using Flash_It.Preferences;
 using Flash_It.Droid.Helpers;
 using Flash_It.Droid.Preferences;
 

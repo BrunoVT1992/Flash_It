@@ -16,6 +16,9 @@ namespace Flash_It.Droid.Helpers
 {
     public static class RingerHelper
     {
+        public static bool FlashProcessStarted { get; set; }
+        public static string CurrentRingerState { get; set; }
+
         public static Boolean CheckIfProfileIsAllowed()
         {
             Boolean allowed = false;
