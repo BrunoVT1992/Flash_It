@@ -6,22 +6,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <fragment
-            class="Flash_It.Droid.Views.Fragments.TextMessageFragment"
-            android:id="@+id/Fragment_ActivityMain_TextMessage"
+        <Flash_It.Droid.Views.Custom.TextMessageView
+            android:id="@+id/ActivityMain_TextMessageView"
             android:layout_width="match_parent"
-            android:layout_height="150dp" />
-        <fragment
-            class="Flash_It.Droid.Views.Fragments.CallFragment"
-            android:id="@+id/Fragment_ActivityMain_Call"
+            android:layout_height="wrap_content" />
+        <Flash_It.Droid.Views.Custom.CallView
+            android:id="@+id/ActivityMain_CallView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp" />
-        <fragment
-            class="Flash_It.Droid.Views.Fragments.BatteryFragment"
-            android:id="@+id/Fragment_ActivityMain_Battery"
+        <Flash_It.Droid.Views.Custom.BatteryView
+            android:id="@+id/ActivityMain_BatteryView"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp" />
+        <TextView
+            android:id="@+id/TextView_ActivityMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal" />
     </LinearLayout>
 </ScrollView>

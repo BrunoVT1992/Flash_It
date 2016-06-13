@@ -92,23 +92,27 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Activities\MainActivity.cs" />
-    <Compile Include="Views\Activities\SplachActivity.cs" />
-    <Compile Include="Views\Fragments\BatteryFragment.cs" />
-    <Compile Include="Views\Fragments\CallFragment.cs" />
-    <Compile Include="Views\Fragments\TextMessageFragment.cs" />
+    <Compile Include="Views\Activities\SplashActivity.cs" />
+    <Compile Include="Views\Custom\BatteryView.cs" />
+    <Compile Include="Views\Custom\CallView.cs" />
+    <Compile Include="Views\Custom\SliderView.cs" />
+    <Compile Include="Views\Custom\TextMessageView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <AndroidResource Include="Resources\layout\ActivityMain.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FragmentTextMessage.axml">
+    <AndroidResource Include="Resources\layout\ViewTextMessage.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FragmentCall.axml">
+    <AndroidResource Include="Resources\layout\ViewCall.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FragmentBattery.axml">
+    <AndroidResource Include="Resources\layout\ViewBattery.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ViewSlider.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

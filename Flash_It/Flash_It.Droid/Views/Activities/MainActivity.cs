@@ -1,15 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Support.V7.App;
 using Android.Content.PM;
+using Android.Widget;
 
 namespace Flash_It.Droid.Views.Activities
 {
@@ -21,6 +14,10 @@ namespace Flash_It.Droid.Views.Activities
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.ActivityMain);
+
+            var versionNumber = FindViewById<TextView>(Resource.Id.TextView_ActivityMain);
+
+            versionNumber.Text = PackageManager.GetPackageInfo(PackageName, 0).VersionName;
         }
     }
 }
