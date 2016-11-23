@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{9BE0E7FC-8884-4EA5-B0B5-8ADBAA490736}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="flash-it Status">
+    <Files>
+      <File FileName="Flash_It/Flash_It.Droid/Helpers/InitialSetup.cs" Line="5" Column="30" />
+      <File FileName="Flash_It/Flash_It.Droid/Helpers/Preference.cs" Line="8" Column="28" />
+      <File FileName="Flash_It/Flash_It.Droid/IntentServices/CallIntentService.cs" Line="11" Column="2" />
+      <File FileName="Flash_It/Flash_It.Droid/IntentServices/SmsIntentService.cs" Line="28" Column="14" />
+      <File FileName="Flash_It/Flash_It.Droid/Recievers/CallReciever.cs" Line="7" Column="1" />
+      <File FileName="Flash_It/Flash_It.Droid/Recievers/TextMessageReciever.cs" Line="10" Column="60" />
+      <File FileName="Flash_It/Flash_It.Droid/FlashItApplication.cs" Line="17" Column="14" />
+      <File FileName="Flash_It/Flash_It.Droid/Bootstrap/App.cs" Line="3" Column="35" />
+      <File FileName="Flash_It/Flash_It.Droid/Bootstrap/RegistrationModule.cs" Line="11" Column="29" />
+      <File FileName="Flash_It/Flash_It.Droid/Utils/BatteryUtil.cs" Line="7" Column="31" />
+      <File FileName="Flash_It/Flash_It.Droid/Utils/CameraUtil.cs" Line="5" Column="31" />
+      <File FileName="Flash_It/Flash_It.Droid/Utils/RingerUtil.cs" Line="6" Column="1" />
+      <File FileName="Flash_It/Flash_It.Droid/Preferences/BatterySaverPreferences.cs" Line="17" Column="6" />
+      <File FileName="flash-it Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Flash__It.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
+</Properties>
