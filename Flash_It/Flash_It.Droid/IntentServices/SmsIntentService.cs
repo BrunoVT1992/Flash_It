@@ -1,34 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using System.Threading;
-using Android.Hardware;
-using System.Diagnostics;
-using Flash_It.Droid.Helpers;
 using Flash_It.Droid.Preferences;
+using Flash_It.Droid.Utils;
+using Flash_It.Droid.Bootstrap;
+using Autofac;
+using System.Threading.Tasks;
 
 namespace Flash_It.Droid.IntentServices
 {
     [Service]
     public class SmsIntentService : IntentService
     {
-        protected override void OnHandleIntent(Intent intent)
-        {
-            InitialSetupHelper.CheckInitialSetup();
+		private readonly BatteryUtil _battery;
+		private readonly CameraUtil _camera;
+		private readonly RingerUtil _ringer;
 
-            if (SmsPreferences.Enabled && BatteryHelper.CheckBatteryLevelAllowed() && RingerHelper.CheckIfProfileIsAllowed())
+		public SmsIntentService()
+		{
+			_battery = App.Container.Resolve<BatteryUtil>();
+			_camera = App.Container.Resolve<CameraUtil>();
+			_ringer = App.Container.Resolve<RingerUtil>();
+		}
+
+        protected override async void OnHandleIntent(Intent intent)
+        {
+			if (SmsPreferences.Enabled && _battery.CheckBatteryLevelAllowed() && _ringer.CheckIfProfileIsAllowed())
             {
                 for (int i = 1; i <= SmsPreferences.NumberOfTimes; i++)
                 {
-                    CameraHelper.Flash(SmsPreferences.OnTime);
-                    Thread.Sleep(SmsPreferences.OffTime);
+                    _camera.Flash(SmsPreferences.OnTime);
+                    await Task.Delay(SmsPreferences.OffTime);
                 }
             }
         }

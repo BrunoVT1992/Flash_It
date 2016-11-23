@@ -1,21 +1,14 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Flash_It.Droid.Preferences;
 
-namespace Flash_It.Droid.Helpers
+namespace Flash_It.Droid.Utils
 {
-    public static class BatteryHelper
+    public class BatteryUtil
     {
-        public static int GetBatteryLevel()
+        public int GetBatteryLevel()
         {
             var filter = new IntentFilter(Intent.ActionBatteryChanged);
             var battery = Application.Context.RegisterReceiver(null, filter);
@@ -23,7 +16,7 @@ namespace Flash_It.Droid.Helpers
             return battery.GetIntExtra(BatteryManager.ExtraLevel, -1);
         }
 
-        public static Boolean CheckBatteryLevelAllowed()
+        public Boolean CheckBatteryLevelAllowed()
         {
             if (BatterySaverPreferences.Enabled)
             {

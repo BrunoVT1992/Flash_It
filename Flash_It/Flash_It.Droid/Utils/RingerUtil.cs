@@ -1,25 +1,17 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Media;
 using Flash_It.Droid.Preferences;
 
-namespace Flash_It.Droid.Helpers
+namespace Flash_It.Droid.Utils
 {
-    public static class RingerHelper
+    public class RingerUtil
     {
-        public static bool FlashProcessStarted { get; set; }
-        public static string CurrentRingerState { get; set; }
+        public bool FlashProcessStarted { get; set; }
+        public string CurrentRingerState { get; set; }
 
-        public static Boolean CheckIfProfileIsAllowed()
+        public Boolean CheckIfProfileIsAllowed()
         {
             Boolean allowed = false;
             AudioManager am = (AudioManager)Application.Context.GetSystemService(Context.AudioService);

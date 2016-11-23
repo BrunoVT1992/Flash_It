@@ -1,15 +1,10 @@
 ﻿using Flash_It.Droid.Preferences;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Flash_It.Droid.Helpers
 {
-    public static class InitialSetupHelper
+    public class InitialSetup
     {
-        public static void CheckInitialSetup()
+        public void DoInitialSetup()
         {
             if (!InitialSetupPreferences.InitialSetupDone)
             {

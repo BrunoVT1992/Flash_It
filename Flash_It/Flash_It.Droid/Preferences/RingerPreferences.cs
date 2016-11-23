@@ -19,11 +19,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("RingerPreferences_SilentModeEnabled");
+                return Helpers.Preference.GetBoolean("RingerPreferences_SilentModeEnabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("RingerPreferences_SilentModeEnabled", value);
+                Helpers.Preference.SetBoolean("RingerPreferences_SilentModeEnabled", value);
             }
         }
 
@@ -31,11 +31,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("RingerPreferences_VibrateModeEnabled");
+                return Helpers.Preference.GetBoolean("RingerPreferences_VibrateModeEnabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("RingerPreferences_VibrateModeEnabled", value);
+                Helpers.Preference.SetBoolean("RingerPreferences_VibrateModeEnabled", value);
             }
         }
 
@@ -43,11 +43,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("RingerPreferences_NormalModeEnabled");
+                return Helpers.Preference.GetBoolean("RingerPreferences_NormalModeEnabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("RingerPreferences_NormalModeEnabled", value);
+                Helpers.Preference.SetBoolean("RingerPreferences_NormalModeEnabled", value);
             }
         }
     }

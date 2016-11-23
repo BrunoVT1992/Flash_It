@@ -1,38 +1,41 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using System.Threading;
-using Flash_It.Droid.Helpers;
 using Flash_It.Droid.Preferences;
 using Android.Telephony;
+using Flash_It.Droid.Utils;
+using Flash_It.Droid.Bootstrap;
+using Autofac;
+using System.Threading.Tasks;
 
 namespace Flash_It.Droid.IntentServices
 {
     [Service]
     public class CallIntentService : IntentService
     {
-        protected override void OnHandleIntent(Intent intent)
-        {
-            InitialSetupHelper.CheckInitialSetup();
+		private readonly RingerUtil _ringer;
+		private readonly BatteryUtil _battery;
+		private readonly CameraUtil _camera;
 
-            if (CallPreferences.Enabled && !RingerHelper.FlashProcessStarted && BatteryHelper.CheckBatteryLevelAllowed() && RingerHelper.CheckIfProfileIsAllowed())
+		public CallIntentService()
+		{
+			_ringer = App.Container.Resolve<RingerUtil>();
+			_battery = App.Container.Resolve<BatteryUtil>();
+			_camera = App.Container.Resolve<CameraUtil>();
+		}
+
+        protected async override void OnHandleIntent(Intent intent)
+        {
+            if (CallPreferences.Enabled && !_ringer.FlashProcessStarted && _battery.CheckBatteryLevelAllowed() && _ringer.CheckIfProfileIsAllowed())
             {
-                RingerHelper.FlashProcessStarted = true;
+                _ringer.FlashProcessStarted = true;
 
                 do
                 {
-                    CameraHelper.Flash(CallPreferences.OnTime);
-                    Thread.Sleep(CallPreferences.OffTime);
-                } while (RingerHelper.CurrentRingerState == TelephonyManager.ExtraStateRinging);
+					_camera.Flash(CallPreferences.OnTime);
+					await Task.Delay(CallPreferences.OffTime);
+                } while (_ringer.CurrentRingerState == TelephonyManager.ExtraStateRinging);
 
-                RingerHelper.FlashProcessStarted = false;
+                _ringer.FlashProcessStarted = false;
             }
         }
     }

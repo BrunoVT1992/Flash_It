@@ -19,11 +19,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("BatterySaverPreferences_Enabled");
+                return Helpers.Preference.GetBoolean("BatterySaverPreferences_Enabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("BatterySaverPreferences_Enabled", value);
+                Helpers.Preference.SetBoolean("BatterySaverPreferences_Enabled", value);
             }
         }
 
@@ -31,11 +31,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetInt("BatterySaverPreferences_BatteryMinLevel");
+                return Helpers.Preference.GetInt("BatterySaverPreferences_BatteryMinLevel");
             }
             set
             {
-                PreferencesHelper.SetInt("BatterySaverPreferences_BatteryMinLevel", value);
+                Helpers.Preference.SetInt("BatterySaverPreferences_BatteryMinLevel", value);
             }
         }
     }

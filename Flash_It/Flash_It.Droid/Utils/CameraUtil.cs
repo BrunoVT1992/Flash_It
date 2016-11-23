@@ -1,19 +1,12 @@
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Hardware;
-using Debug = System.Diagnostics.Debug;
-using System.Threading.Tasks;
 using System.Threading;
-using System.Diagnostics;
 using System;
 
-namespace Flash_It.Droid.Helpers
+namespace Flash_It.Droid.Utils
 {
-    public static class CameraHelper
+    public class CameraUtil
     {
-        public static void Flash(int flashDuration)
+        public void Flash(int flashDuration)
         {
             try
             {
@@ -48,10 +41,7 @@ namespace Flash_It.Droid.Helpers
             }
             catch (Exception ex)
             {
-                if (Debugger.IsAttached)
-                {
-                    Debug.WriteLine(ex.ToString());
-                }
+				Console.WriteLine(ex.ToString());
             }
         }
     }

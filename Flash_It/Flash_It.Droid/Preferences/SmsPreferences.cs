@@ -13,11 +13,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("InitialSetupPreferences_Enabled");
+                return Helpers.Preference.GetBoolean("InitialSetupPreferences_Enabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("InitialSetupPreferences_Enabled", value);
+                Helpers.Preference.SetBoolean("InitialSetupPreferences_Enabled", value);
             }
         }
 
@@ -25,11 +25,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetInt("SmsPreferences_OnTime");
+                return Helpers.Preference.GetInt("SmsPreferences_OnTime");
             }
             set
             {
-                PreferencesHelper.SetInt("SmsPreferences_OnTime", value);
+                Helpers.Preference.SetInt("SmsPreferences_OnTime", value);
             }
         }
 
@@ -37,11 +37,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetInt("SmsPreferences_OffTime");
+                return Helpers.Preference.GetInt("SmsPreferences_OffTime");
             }
             set
             {
-                PreferencesHelper.SetInt("SmsPreferences_OffTime", value);
+                Helpers.Preference.SetInt("SmsPreferences_OffTime", value);
             }
         }
 
@@ -49,11 +49,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetInt("SmsPreferences_NumberOfTimes");
+                return Helpers.Preference.GetInt("SmsPreferences_NumberOfTimes");
             }
             set
             {
-                PreferencesHelper.SetInt("SmsPreferences_NumberOfTimes", value);
+                Helpers.Preference.SetInt("SmsPreferences_NumberOfTimes", value);
             }
         }
     }

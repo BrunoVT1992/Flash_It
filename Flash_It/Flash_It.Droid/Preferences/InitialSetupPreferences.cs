@@ -13,11 +13,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("InitialSetupPreferences_InitialSetupDone");
+                return Helpers.Preference.GetBoolean("InitialSetupPreferences_InitialSetupDone");
             }
             set
             {
-                PreferencesHelper.SetBoolean("InitialSetupPreferences_InitialSetupDone", value);
+                Helpers.Preference.SetBoolean("InitialSetupPreferences_InitialSetupDone", value);
             }
         }
     }

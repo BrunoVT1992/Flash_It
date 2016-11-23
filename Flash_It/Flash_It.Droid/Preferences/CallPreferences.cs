@@ -13,11 +13,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetBoolean("CallPreferences_Enabled");
+                return Helpers.Preference.GetBoolean("CallPreferences_Enabled");
             }
             set
             {
-                PreferencesHelper.SetBoolean("CallPreferences_Enabled", value);
+                Helpers.Preference.SetBoolean("CallPreferences_Enabled", value);
             }
         }
 
@@ -25,11 +25,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetInt("CallPreferences_OnTime");
+                return Helpers.Preference.GetInt("CallPreferences_OnTime");
             }
             set
             {
-                PreferencesHelper.SetInt("CallPreferences_OnTime", value);
+                Helpers.Preference.SetInt("CallPreferences_OnTime", value);
             }
         }
 
@@ -37,11 +37,11 @@ namespace Flash_It.Droid.Preferences
         {
             get
             {
-                return PreferencesHelper.GetInt("CallPreferences_OffTime");
+                return Helpers.Preference.GetInt("CallPreferences_OffTime");
             }
             set
             {
-                PreferencesHelper.SetInt("CallPreferences_OffTime", value);
+                Helpers.Preference.SetInt("CallPreferences_OffTime", value);
             }
         }
     }
