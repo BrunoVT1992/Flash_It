@@ -8,8 +8,8 @@ namespace Flash_It.Droid.Utils
 {
     public class RingerUtil
     {
-        public bool FlashProcessStarted { get; set; }
-        public string CurrentRingerState { get; set; }
+        public bool FlashInProgress { get; set; }
+		public CallState CallState { get; private set; }
 
         public Boolean CheckIfProfileIsAllowed()
         {
@@ -34,5 +34,10 @@ namespace Flash_It.Droid.Utils
 
             return allowed;
         }
+
+		public void SetCallState(CallState state)
+		{
+			CallState = state;
+		}
     }
 }

@@ -6,7 +6,7 @@ using Android.Content.PM;
 
 namespace Flash_It.Droid.Views.Activities
 {
-    [Activity(Theme = "@style/SplashActivityTheme", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Theme = "@style/SplashActivityTheme", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

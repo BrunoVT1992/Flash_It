@@ -6,16 +6,16 @@ using Flash_It.Droid.Bootstrap;
 using Autofac;
 using System.Threading.Tasks;
 
-namespace Flash_It.Droid.IntentServices
+namespace Flash_It.Droid.Services
 {
     [Service]
-    public class SmsIntentService : IntentService
+    public class TextMessageIntentService : IntentService
     {
 		private readonly BatteryUtil _battery;
 		private readonly CameraUtil _camera;
 		private readonly RingerUtil _ringer;
 
-		public SmsIntentService()
+		public TextMessageIntentService()
 		{
 			_battery = App.Container.Resolve<BatteryUtil>();
 			_camera = App.Container.Resolve<CameraUtil>();

@@ -98,8 +98,8 @@
   <ItemGroup>
     <Compile Include="Helpers\InitialSetup.cs" />
     <Compile Include="Helpers\Preference.cs" />
-    <Compile Include="IntentServices\CallIntentService.cs" />
-    <Compile Include="IntentServices\SmsIntentService.cs" />
+    <Compile Include="Services\CallIntentService.cs" />
+    <Compile Include="Services\TextMessageIntentService.cs" />
     <Compile Include="Recievers\CallReciever.cs" />
     <Compile Include="Recievers\TextMessageReciever.cs" />
     <Compile Include="Preferences\BatterySaverPreferences.cs" />
@@ -121,6 +121,7 @@
     <Compile Include="Utils\BatteryUtil.cs" />
     <Compile Include="Utils\CameraUtil.cs" />
     <Compile Include="Utils\RingerUtil.cs" />
+    <Compile Include="Models\Enums\CallState.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\ActivityMain.axml">
@@ -162,6 +163,8 @@
     <Folder Include="Assets\" />
     <Folder Include="Bootstrap\" />
     <Folder Include="Utils\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Enums\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

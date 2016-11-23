@@ -20,9 +20,9 @@ namespace Flash_It.Droid.Bootstrap
 
 		private void RegisterUtils(ContainerBuilder builder)
 		{
-			builder.RegisterType<BatteryUtil>();
-			builder.RegisterType<CameraUtil>();
-			builder.RegisterType<RingerUtil>();
+			builder.RegisterType<BatteryUtil>().SingleInstance();
+			builder.RegisterType<CameraUtil>().SingleInstance();
+			builder.RegisterType<RingerUtil>().SingleInstance();
 		}
 	}
 }

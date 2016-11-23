@@ -3,7 +3,7 @@ using Android.App;
 using Android.Content;
 using Android.Provider;
 using Android.Support.V4.Content;
-using Flash_It.Droid.IntentServices;
+using Flash_It.Droid.Services;
 
 namespace Flash_It.Droid.Recievers
 {
@@ -15,7 +15,7 @@ namespace Flash_It.Droid.Recievers
         {
             if (Telephony.Sms.Intents.SmsReceivedAction == intent.Action)
             {
-                Intent service = new Intent(context, typeof(SmsIntentService));
+				Intent service = new Intent(context, typeof(TextMessageIntentService));
                 StartWakefulService(context, service);
             }
         }
